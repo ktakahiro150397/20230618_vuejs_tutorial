@@ -15,11 +15,8 @@ import TutorialPlayGround from './components/TutorialPlayGround.vue';
 
   <main>
     <TutorialPlayGround msg="This is vue tag attribute!" />
-    <TutorialPlayGround msg="<span style='color:red;'>This should be red.</span>" />
-    <TutorialPlayGround msg="attribute bindings!" color="orange" />
-    <TutorialPlayGround msg="This textbox is disabled...:(" disabled="true" />
 
-    <TheWelcome />
+    <!-- <TheWelcome /> -->
   </main>
 </template>
 

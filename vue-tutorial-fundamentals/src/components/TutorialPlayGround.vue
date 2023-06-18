@@ -37,10 +37,35 @@ function onClickToggle(){
     console.log("clicked!");
     disabled = !disabled;
 }
+
+
+const isActive = ref(true)
+const isError = ref(false)
+// const classObj = reactive({
+//     obj_active: true,
+//     'obj_text-danger': false
+// })
+
 </script>
+
+<style>
+.active{
+    background-color:yellow;
+}
+.text-danger{
+    color:red;
+}
+</style>
 
 <template>
     <div>
+        <!-- クラスバインディング / 固定の文字列と、バインドするものを別に記述できる -->
+        <!-- <div class="default" :class="{ active: isActive , 'text-danger' : isError }"> -->
+        <div class="default" :class="{ active: isActive , 'text-danger' : isError }">
+            <p>isActive : {{ isActive }}</p>
+            <p>isError : {{ isError }}</p>
+        </div>
+
         <!-- イベントの処理を@...で記載 -->
         <input type="button" @click="increment" value="increment value" />
         <p>
