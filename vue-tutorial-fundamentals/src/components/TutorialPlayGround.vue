@@ -1,5 +1,18 @@
+
+
 <script setup>
-    defineProps({
+import { ref } from 'vue'
+
+// ref()でリアクティブ状態を宣言する
+// ref()は「深いリアクティブ」になる 
+// => 配列の値を変更した場合でも再レンダリングがトリガーする
+const count = ref(0)
+
+function increment(){
+    count.value++
+}
+
+defineProps({
         msg:{
             type:String,
             required:true
@@ -28,6 +41,13 @@ function onClickToggle(){
 
 <template>
     <div>
+        <!-- イベントの処理を@...で記載 -->
+        <input type="button" @click="increment" value="increment value" />
+        <p>
+            <!-- テンプレート中ではref()が自動でアンラップされる -->
+            count : {{ count }}
+        </p>
+
         <p>
             <!-- マスタッシュ構文 / テキストの展開 -->
             Message : {{ msg }}
