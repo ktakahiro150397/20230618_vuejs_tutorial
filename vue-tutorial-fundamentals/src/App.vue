@@ -2,6 +2,8 @@
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
 import TutorialPlayGround from './components/TutorialPlayGround.vue';
+import FormInputBinding from './components/FormInputBinding.vue';
+import ifDirective from './components/ifDirective.vue';
 </script>
 
 <template>
@@ -15,6 +17,14 @@ import TutorialPlayGround from './components/TutorialPlayGround.vue';
 
   <main>
     <TutorialPlayGround msg="This is vue tag attribute!" />
+
+    <div style="border:1px solid gray;padding:10px;margin:10px;">
+      <FormInputBinding text="Initial input" />
+    </div>
+
+    <div style="border:1px solid gray;padding:10px;margin:10px;">
+      <ifDirective />
+    </div>
 
     <!-- <TheWelcome /> -->
   </main>
