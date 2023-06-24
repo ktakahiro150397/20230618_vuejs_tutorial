@@ -4,6 +4,7 @@ import TheWelcome from './components/TheWelcome.vue'
 import TutorialPlayGround from './components/TutorialPlayGround.vue';
 import FormInputBinding from './components/FormInputBinding.vue';
 import ifDirective from './components/ifDirective.vue';
+import listBinding from './components/listBinding.vue';
 </script>
 
 <template>
@@ -24,6 +25,10 @@ import ifDirective from './components/ifDirective.vue';
 
     <div style="border:1px solid gray;padding:10px;margin:10px;">
       <ifDirective />
+    </div>
+
+    <div style="border:1px solid gray;padding:10px;margin:10px;">
+      <listBinding />
     </div>
 
     <!-- <TheWelcome /> -->
